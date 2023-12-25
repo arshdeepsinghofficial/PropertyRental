@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RentUnitController">
+   <children>
+      <Label layoutX="46.0" layoutY="45.0" prefHeight="17.0" prefWidth="242.0" text="Rent Unit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutX="24.0" layoutY="71.0" prefHeight="51.0" prefWidth="572.0">
+         <children>
+            <Label fx:id="label_name" layoutX="22.0" layoutY="14.0" text="Name : " />
+            <Label fx:id="label_email" layoutX="298.0" layoutY="14.0" text="Email ID : " />
+            <TextField fx:id="name" layoutX="121.0" layoutY="10.0" />
+            <TextField fx:id="email" layoutX="402.0" layoutY="10.0" />
+         </children>
+      </Pane>
+      <Label layoutX="46.0" layoutY="136.0" text="Property Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutX="17.0" layoutY="153.0" prefHeight="63.0" prefWidth="572.0">
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" text="Property Type : " />
+            <RadioButton fx:id="apartment" layoutX="125.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="APARTMENT">
+               <toggleGroup>
+                  <ToggleGroup fx:id="PROPERTYTYPE3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="condo" layoutX="224.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="CONDO" toggleGroup="$PROPERTYTYPE3" />
+            <RadioButton fx:id="house" layoutX="306.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="HOUSE" toggleGroup="$PROPERTYTYPE3" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_apartment" layoutX="24.0" layoutY="216.0" prefHeight="116.0" prefWidth="572.0">
+         <children>
+            <Label fx:id="label_city" layoutX="24.0" layoutY="26.0" text="City : " />
+            <Label fx:id="label_state" layoutX="303.0" layoutY="26.0" text="State : " />
+            <Label fx:id="label_postalCode" layoutX="24.0" layoutY="71.0" text="Postal Code : " />
+            <TextField fx:id="apartmentCity" layoutX="125.0" layoutY="22.0" />
+            <TextField fx:id="apartmentState" layoutX="403.0" layoutY="22.0" />
+            <TextField fx:id="apartmentPostalCode" layoutX="125.0" layoutY="67.0" />
+            <Label fx:id="label_apartmentNumber" layoutX="303.0" layoutY="71.0" text="Apartment No. : " />
+            <TextField fx:id="apartmentNumber" layoutX="403.0" layoutY="67.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_condo" layoutX="19.0" layoutY="322.0" prefHeight="149.0" prefWidth="584.0">
+         <children>
+            <Label fx:id="label_city1" layoutX="28.0" layoutY="18.0" text="City : " />
+            <Label fx:id="label_state1" layoutX="307.0" layoutY="18.0" text="State : " />
+            <Label fx:id="label_postalCode1" layoutX="28.0" layoutY="63.0" text="Postal Code : " />
+            <TextField fx:id="condoCity" layoutX="129.0" layoutY="14.0" />
+            <TextField fx:id="condoState" layoutX="407.0" layoutY="14.0" />
+            <TextField fx:id="condoPostalCode" layoutX="129.0" layoutY="59.0" />
+            <Label fx:id="label_condoStreetNumber" layoutX="307.0" layoutY="63.0" text="Street Number : " />
+            <Label fx:id="label_unitNumber" layoutX="28.0" layoutY="107.0" text="Unit Number : " />
+            <TextField fx:id="condoStreetNumber" layoutX="407.0" layoutY="59.0" />
+            <TextField fx:id="unitNumber" layoutX="129.0" layoutY="103.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_house" layoutX="24.0" layoutY="471.0" prefHeight="99.0" prefWidth="584.0">
+         <children>
+            <Label fx:id="label_city11" layoutX="21.0" layoutY="19.0" text="City : " />
+            <Label fx:id="label_state11" layoutX="300.0" layoutY="19.0" text="State : " />
+            <Label fx:id="label_postalCode11" layoutX="21.0" layoutY="64.0" text="Postal Code : " />
+            <TextField fx:id="houseCity" layoutX="122.0" layoutY="15.0" />
+            <TextField fx:id="houseState" layoutX="400.0" layoutY="15.0" />
+            <TextField fx:id="housePostalCode" layoutX="122.0" layoutY="60.0" />
+            <Label fx:id="label_houseStreetNumber" layoutX="302.0" layoutY="63.0" text="Street Number : " />
+            <TextField fx:id="houseStreetNumber" layoutX="400.0" layoutY="59.0" />
+         </children>
+      </Pane>
+      <Button fx:id="button_rentUnit" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="698.0" mnemonicParsing="false" onAction="#rentUnit" prefHeight="25.0" prefWidth="342.0" text="Rent Unit" />
+      <Pane fx:id="pane_lease" layoutX="24.0" layoutY="607.0" prefHeight="77.0" prefWidth="572.0">
+         <children>
+            <DatePicker fx:id="startDate" layoutX="119.0" layoutY="26.0" />
+            <DatePicker fx:id="endDate" layoutX="398.0" layoutY="26.0" />
+            <Label fx:id="label_startDate" layoutX="14.0" layoutY="26.0" text="Start Date : " />
+            <Label fx:id="label_endDate" layoutX="305.0" layoutY="30.0" text="End Date : " />
+         </children>
+      </Pane>
+      <Label fx:id="label_leaseDetails" layoutX="46.0" layoutY="590.0" text="Lease Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_error" layoutX="144.0" layoutY="45.0" />
+   </children>
+</AnchorPane>

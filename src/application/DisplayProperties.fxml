@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DisplayPropertiesController">
+   <children>
+      <Label layoutX="28.0" layoutY="45.0" prefHeight="17.0" prefWidth="242.0" text="Display All Properties">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="apartmentsTable" layoutX="14.0" layoutY="110.0" prefHeight="118.0" prefWidth="744.0">
+        <columns>
+          <TableColumn fx:id="apartment_address" prefWidth="75.0" text="ADDRESS" />
+          <TableColumn fx:id="apartment_city" prefWidth="69.0" text="CITY" />
+            <TableColumn fx:id="apartment_state" prefWidth="81.0" text="STATE" />
+            <TableColumn fx:id="apartment_postalCode" prefWidth="75.0" text="POSTAL CODE" />
+            <TableColumn fx:id="apartment_rent" prefWidth="75.0" text="RENT" />
+            <TableColumn fx:id="apartmentNumber" prefWidth="75.0" text="APARTMENT NUMBER" />
+            <TableColumn fx:id="numberOfBedrooms" prefWidth="75.0" text="NUMBER OF BEDROOMS" />
+            <TableColumn fx:id="numberOfBathrooms" prefWidth="103.0" text="NUMBER OF BATHROOMS" />
+            <TableColumn fx:id="squareFootage" prefWidth="87.0" text="SQUARE FOOTAGE" />
+        </columns>
+      </TableView>
+      <Label layoutX="28.0" layoutY="84.0" prefHeight="17.0" prefWidth="98.0" text="Apartments List" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="buttonRefresh" layoutX="671.0" layoutY="80.0" mnemonicParsing="false" onAction="#refreshList" prefHeight="25.0" prefWidth="83.0" text="Refresh" />
+      <TableView fx:id="condosTable" layoutX="14.0" layoutY="266.0" prefHeight="110.0" prefWidth="744.0">
+         <columns>
+            <TableColumn fx:id="condo_address" prefWidth="105.0" text="ADDRESS" />
+            <TableColumn fx:id="condo_city" prefWidth="107.0" text="CITY" />
+            <TableColumn fx:id="condo_state" prefWidth="78.0" text="STATE" />
+            <TableColumn fx:id="condo_postalCode" minWidth="0.0" prefWidth="110.0" text="POSTAL CODE" />
+            <TableColumn fx:id="condo_rent" prefWidth="91.0" text="RENT" />
+            <TableColumn fx:id="condoStreetNumber" prefWidth="118.0" text="STREET NUMBER" />
+            <TableColumn fx:id="unitNumber" prefWidth="134.0" text="UNIT NUMBER" />
+         </columns>
+      </TableView>
+      <Label layoutX="28.0" layoutY="240.0" prefHeight="17.0" prefWidth="98.0" text="Condos List" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="housesTable" layoutX="12.0" layoutY="421.0" prefHeight="110.0" prefWidth="744.0">
+         <columns>
+            <TableColumn fx:id="house_address" prefWidth="123.0" text="ADDRESS" />
+            <TableColumn fx:id="house_city" prefWidth="136.0" text="CITY" />
+            <TableColumn fx:id="house_state" prefWidth="115.0" text="STATE" />
+            <TableColumn fx:id="house_postalCode" minWidth="0.0" prefWidth="124.0" text="POSTAL CODE" />
+            <TableColumn fx:id="house_rent" prefWidth="117.0" text="RENT" />
+            <TableColumn fx:id="houseStreetNumber" prefWidth="127.0" text="STREET NUMBER" />
+         </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="395.0" prefHeight="17.0" prefWidth="98.0" text="Houses List" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
