@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.updatePaymentStatusController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="654.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="36.0" layoutY="35.0" prefHeight="17.0" prefWidth="242.0" text="Update Payment Status">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="61.0" prefHeight="51.0" prefWidth="572.0">
+               <children>
+                  <Label fx:id="label_name" layoutX="22.0" layoutY="14.0" text="Name : " />
+                  <Label fx:id="label_email" layoutX="298.0" layoutY="14.0" text="Email ID : " />
+                  <TextField fx:id="name" layoutX="121.0" layoutY="10.0" />
+                  <TextField fx:id="email" layoutX="402.0" layoutY="10.0" />
+               </children>
+            </Pane>
+            <Label layoutX="36.0" layoutY="126.0" text="Interested Property Details">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="7.0" layoutY="143.0" prefHeight="63.0" prefWidth="572.0">
+               <children>
+                  <Label layoutX="31.0" layoutY="27.0" text="Property Type : " />
+                  <RadioButton fx:id="apartment" layoutX="125.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="APARTMENT">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="PROPERTYTYPE2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="condo" layoutX="224.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="CONDO" toggleGroup="$PROPERTYTYPE2" />
+                  <RadioButton fx:id="house" layoutX="306.0" layoutY="27.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="HOUSE" toggleGroup="$PROPERTYTYPE2" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_apartment" layoutX="14.0" layoutY="206.0" prefHeight="116.0" prefWidth="572.0">
+               <children>
+                  <Label fx:id="label_city" layoutX="24.0" layoutY="26.0" text="City : " />
+                  <Label fx:id="label_state" layoutX="303.0" layoutY="26.0" text="State : " />
+                  <Label fx:id="label_postalCode" layoutX="24.0" layoutY="71.0" text="Postal Code : " />
+                  <TextField fx:id="apartmentCity" layoutX="125.0" layoutY="22.0" />
+                  <TextField fx:id="apartmentState" layoutX="403.0" layoutY="22.0" />
+                  <TextField fx:id="apartmentPostalCode" layoutX="125.0" layoutY="67.0" />
+                  <Label fx:id="label_apartmentNumber" layoutX="303.0" layoutY="71.0" text="Apartment No. : " />
+                  <TextField fx:id="apartmentNumber" layoutX="403.0" layoutY="67.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_condo" layoutX="9.0" layoutY="312.0" prefHeight="149.0" prefWidth="584.0">
+               <children>
+                  <Label fx:id="label_city1" layoutX="28.0" layoutY="18.0" text="City : " />
+                  <Label fx:id="label_state1" layoutX="307.0" layoutY="18.0" text="State : " />
+                  <Label fx:id="label_postalCode1" layoutX="28.0" layoutY="63.0" text="Postal Code : " />
+                  <TextField fx:id="condoCity" layoutX="129.0" layoutY="14.0" />
+                  <TextField fx:id="condoState" layoutX="407.0" layoutY="14.0" />
+                  <TextField fx:id="condoPostalCode" layoutX="129.0" layoutY="59.0" />
+                  <Label fx:id="label_condoStreetNumber" layoutX="307.0" layoutY="63.0" text="Street Number : " />
+                  <Label fx:id="label_unitNumber" layoutX="28.0" layoutY="107.0" text="Unit Number : " />
+                  <TextField fx:id="condoStreetNumber" layoutX="407.0" layoutY="59.0" />
+                  <TextField fx:id="unitNumber" layoutX="129.0" layoutY="103.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_house" layoutX="14.0" layoutY="461.0" prefHeight="99.0" prefWidth="584.0">
+               <children>
+                  <Label fx:id="label_city11" layoutX="21.0" layoutY="19.0" text="City : " />
+                  <Label fx:id="label_state11" layoutX="300.0" layoutY="19.0" text="State : " />
+                  <Label fx:id="label_postalCode11" layoutX="21.0" layoutY="64.0" text="Postal Code : " />
+                  <TextField fx:id="houseCity" layoutX="122.0" layoutY="15.0" />
+                  <TextField fx:id="houseState" layoutX="400.0" layoutY="15.0" />
+                  <TextField fx:id="housePostalCode" layoutX="122.0" layoutY="60.0" />
+                  <Label fx:id="label_houseStreetNumber" layoutX="302.0" layoutY="63.0" text="Street Number : " />
+                  <TextField fx:id="houseStreetNumber" layoutX="400.0" layoutY="59.0" />
+               </children>
+            </Pane>
+            <Button fx:id="button_addTenant" alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="614.0" mnemonicParsing="false" onAction="#updatePaymentStatus" prefHeight="25.0" prefWidth="342.0" text="Update Payment Status" />
+            <Label fx:id="label_error" layoutX="187.0" layoutY="35.0" />
+            <Label fx:id="label_paymentStatus" layoutX="36.0" layoutY="572.0" text="Payment Status : " />
+            <RadioButton fx:id="paid" layoutX="130.0" layoutY="572.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="PAID">
+               <toggleGroup>
+                  <ToggleGroup fx:id="PAYMENTSTATUS" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="unpaid" layoutX="229.0" layoutY="572.0" mnemonicParsing="false" onAction="#getSelectedPropertyType" text="UNPAID" toggleGroup="$PAYMENTSTATUS" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
